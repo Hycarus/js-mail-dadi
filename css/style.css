@@ -1,0 +1,14 @@
+.dice{
+    height: 300px;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 250px;
+    line-height: 300px;
+}
+.box{
+    height: 100px;
+    width: 250px;
+    border: 1px solid black;
+    border-radius: 20px;
+}

@@ -48,15 +48,25 @@ button.addEventListener('click', function(){
 function randomInteger(min,max){
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-let user = randomInteger(1, 7);
-let computer = randomInteger(1, 7);
-if(user > computer){
-    user = 'user win'
-    console.log(user)
-} else if(user === computer){
-    computer = 'pareggio'
-    console.log(computer);
-} else{
-    computer = 'computer win'
-    console.log(computer);
-}
+let buttonDice = document.querySelector('.btn-dark');
+buttonDice.addEventListener('click', function(){
+    let user = randomInteger(1, 6);
+    let computer = randomInteger(1, 6);
+    if(user > computer){
+        console.log(user)
+        let tie = document.querySelector('.tie');
+        tie.innerHTML = `<h1 class="text-danger">User Win!</h1>`
+    } else if(user === computer){
+        console.log(computer);
+        let tie = document.querySelector('.tie');
+        tie.innerHTML = `<h1 class="text-danger">Pareggio!</h1>`
+    } else{
+        console.log(computer)
+        let tie = document.querySelector('.tie');
+        tie.innerHTML = `<h1 class="text-danger">Computer Win!</h1>`
+    }
+    let userContainer = document.querySelector('.user-dice');
+    userContainer.innerHTML = user
+    let computerContainer = document.querySelector('.computer-dice');
+    computerContainer.innerHTML = `${computer}`;
+})
