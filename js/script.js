@@ -9,6 +9,7 @@ const resetBtn = document.querySelector('.btn-danger');
 resetBtn.addEventListener('click', function(){
     const myAlert = document.querySelector('.rounded');
     myAlert.parentNode.removeChild(myAlert);
+    let insertAddress = document.getElementById('address').value = '';
 })
 const button = document.querySelector('button');
 button.addEventListener('click', function(){
