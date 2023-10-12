@@ -8,7 +8,7 @@ const mailAddress = [
 const resetBtn = document.querySelector('.btn-danger');
 resetBtn.addEventListener('click', function(){
     const myAlert = document.querySelector('.rounded');
-    myAlert.classList.add('d-none');
+    myAlert.parentNode.removeChild(myAlert);
 })
 const button = document.querySelector('button');
 button.addEventListener('click', function(){
@@ -43,6 +43,4 @@ button.addEventListener('click', function(){
             console.log(myAlert);
         }
     }
-    
-    
 })
