@@ -45,3 +45,18 @@ button.addEventListener('click', function(){
         }
     }
 })
+function randomInteger(min,max){
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+let user = randomInteger(1, 7);
+let computer = randomInteger(1, 7);
+if(user > computer){
+    user = 'user win'
+    console.log(user)
+} else if(user === computer){
+    computer = 'pareggio'
+    console.log(computer);
+} else{
+    computer = 'computer win'
+    console.log(computer);
+}
