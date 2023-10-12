@@ -5,6 +5,11 @@ const mailAddress = [
     'saraporpora@gmail.com',
     'gigibuffon@gmail.com'
 ];
+const resetBtn = document.querySelector('.btn-danger');
+resetBtn.addEventListener('click', function(){
+    const myAlert = document.querySelector('.rounded');
+    myAlert.classList.add('d-none');
+})
 const button = document.querySelector('button');
 button.addEventListener('click', function(){
     let found = false;
@@ -19,13 +24,13 @@ button.addEventListener('click', function(){
     let container = document.querySelector('.container');
     if(found === true){
         let myAlert = document.createElement('div');
-        myAlert.className = `bg-success`;
+        myAlert.className = `bg-success rounded p-3`;
         myAlert.innerHTML = `Email trovata!`;
         container.append(myAlert);
         console.log(myAlert);
     } else{
         let myAlert = document.createElement('div');
-        myAlert.className = `bg-danger`;
+        myAlert.className = `bg-danger rounded p-3`;
         myAlert.innerHTML = `Email non trovata!`;
         container.append(myAlert);
         console.log(myAlert);
